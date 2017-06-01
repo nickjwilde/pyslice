@@ -1,0 +1,240 @@
+/*
+    Author: Nick Wilde
+
+    Contents:
+        - Elements
+        - Classes
+        - IDs
+        - Responsive
+
+    Organization of each element:
+        1. Coloring
+        2. Boxing
+        3. Positioning
+        4. Sizing
+        5. Other
+*/
+
+/* Elements */
+body{
+	margin: 0;
+	padding-bottom: 6rem;
+
+    position: relative;
+
+    min-height: 100%;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	color: #ff3c2e;
+
+	min-width:150px;
+
+	font-family: Consolas, Lucida Console;
+}
+
+html {
+    height: 100%;
+}
+
+input[type=text], input[type=email] {
+    color: #222222;
+
+    padding: 5px;
+    margin: 8px 0;
+    box-shadow: 0 0px 1px #222222 inset;
+    border: 1px solid #0088d8;
+    border-radius: 4px;
+
+    width: 100%;
+    box-sizing: border-box;
+}
+
+input[type=text]:focus, input[type=email]:focus {
+    background-color: #0088d8;
+    color: white;
+}
+
+input[type="submit"], input[type="button"] {
+    color: white;
+    background-color: #0088d8;
+
+    padding: 8px 0;
+    border: none;
+    border-radius: 4px;
+
+    position: relative;
+    left: 25%;
+    right: 75%;
+
+    width: 50%;
+
+    cursor: pointer;
+    text-decoration: none;
+}
+
+label {
+    color: #d84c00;
+
+    font-variant: small-caps;
+    font-weight: bold;
+}
+
+/* Classes */
+.errorlist {
+    color: red;
+
+    list-style-type: none;
+}
+
+.nav {
+	color: #222222;
+    background-color: #5d5d5d;
+
+	margin: 0 auto;
+	padding: 0;
+    
+    position: fixed;
+    left: 0;
+    right: 0;
+
+	list-style-type: none;
+	overflow: hidden;
+}
+
+.nav-item {
+	float: left;
+
+	max-width: 150px;
+	width: 25%;
+}
+
+.nav-item a {
+	color: #2ecdff;
+
+	padding: 14px 16px;
+
+	display: block;
+	text-align: center;
+	text-decoration: none;
+}
+
+.nav-item a:hover {
+    background-color: #0088d8;
+    color: white;
+
+    box-shadow: 0 4px 6px 0 grey,
+        0 4px 20px 0 grey
+}
+
+.nav-item.active a{
+	border-bottom: solid #0088d8 2px;
+}
+
+.overlay {
+    background-color: #d84c00;
+
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    border-radius: 8px;
+
+    width: 0;
+    height: 100%;
+
+    overflow: hidden;
+    transition: .5s ease;
+}
+
+.side-nav {
+	float: left;
+
+	list-style-type: none;
+}
+
+.uline-h {
+	border-bottom: solid 2px #d84c00;
+	padding-bottom: 5px;
+}
+
+/* IDs */
+#contactForm {
+    max-width: 20rem;
+}
+
+#main-body {
+	margin: 0 auto;
+    padding-top: 5rem;
+
+	width: 60%;
+}
+
+
+#footer {
+    color: #2ecdff;
+    background-color: #2e2e2e;
+
+    padding: 1rem;
+
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    text-align: center;
+}
+
+/* Responsive */
+@media only screen and (max-width: 570px){
+    .nav {
+        background-color: #0088d8;
+
+        position: fixed;
+
+        width: 100%;
+    }
+
+    .nav-item {
+        float: none;
+
+        max-width: none;
+        width: 100%;
+
+        display: none;
+    }
+    
+    .nav-item a {
+        color: white;
+    }
+
+    .nav-item a:hover {
+        box-shadow: none;
+    }
+    
+    .stacked-menu {
+        display: block;
+        cursor: pointer;
+    }
+
+    .stacked-bar {
+        background-color: white;
+
+        margin: 6px auto;
+
+        height: 3px;
+        width: 32px;
+    }
+
+    .visible {
+        display: block;
+    }
+}
+
+@media only screen and (min-width: 571px){
+    .stacked-menu {
+        display: none;
+    }
+}
