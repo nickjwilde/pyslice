@@ -82,10 +82,40 @@ label {
 }
 
 /* Classes */
-.errorlist {
-    color: red;
+.menu-text {
+}
 
-    list-style-type: none;
+@keyframes leftRight {
+   100% {
+       transform: translate(-10px);
+       display: block;
+       /*opacity: 1;*/
+       float: right;
+   }
+}
+
+@keyframes rightLeft {
+    100% {
+        transform: translate(-45px);
+        display: none;
+        opacity: 0;
+        float: right;
+    }
+}
+
+.menu-text.hidden {
+    display: block;
+    float: right;
+    transform: translate(-10px);
+    animation: rightLeft 1s ease-in-out forwards;
+    transition: all 1s ease-in-out;
+}
+
+.menu-text.visible {
+    float: right;
+    transform: translate(-40px);
+    animation: leftRight 1s ease-in-out forwards;
+    transition: all 1s ease-in-out;
 }
 
 .nav {
@@ -118,18 +148,16 @@ label {
 	display: block;
 	text-align: center;
 	text-decoration: none;
+
+    transition: background-color .4s ease;
 }
 
 .nav-item a:hover {
-    background-color: #0088d8;
-    color: white;
-
-    box-shadow: 0 4px 6px 0 grey,
-        0 4px 20px 0 grey
+    background-color: #2e2e2e;
 }
 
-.nav-item.active a{
-	border-bottom: solid #0088d8 2px;
+.nav-item a .fa {
+    margin-right: 5px;
 }
 
 .overlay {
@@ -155,6 +183,24 @@ label {
 	list-style-type: none;
 }
 
+.spin {
+    animation: spin 1s ease-in-out;
+}
+
+.reverse-spin {
+    animation-name: revspin;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes spin {
+    100% { transform: rotate(360deg);}
+}
+
+@keyframes revspin {
+    100% {transform: rotate(-360deg);}
+}
+
 .uline-h {
 	border-bottom: solid 2px #d84c00;
 	padding-bottom: 5px;
@@ -167,7 +213,7 @@ label {
 
 #main-body {
 	margin: 0 auto;
-    padding-top: 5rem;
+    padding-top: 10%;
 
 	width: 60%;
 }
