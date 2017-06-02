@@ -213,7 +213,7 @@ label {
 
 #main-body {
 	margin: 0 auto;
-    padding-top: 10%;
+    padding-top: 5em;
 
 	width: 60%;
 }
@@ -235,52 +235,36 @@ label {
 
 /* Responsive */
 @media only screen and (max-width: 570px){
-    .nav {
-        background-color: #0088d8;
-
-        position: fixed;
-
-        width: 100%;
-    }
-
     .nav-item {
         float: none;
-
-        max-width: none;
         width: 100%;
-
-        display: none;
-    }
-    
-    .nav-item a {
-        color: white;
+        max-width: none;
     }
 
-    .nav-item a:hover {
-        box-shadow: none;
-    }
-    
-    .stacked-menu {
-        display: block;
-        cursor: pointer;
+    .menu-text.hidden {
+        float: none;
+        transform: none;
+        animation: none;
+        display: inline;
     }
 
-    .stacked-bar {
-        background-color: white;
-
-        margin: 6px auto;
-
-        height: 3px;
-        width: 32px;
+    .menu-text.visible {
+        float: none;
+        animation: none;
+        transform: none;
+        display: inline;
     }
 
-    .visible {
-        display: block;
+    .reverse-spin {
+        animation: none;
     }
+
+    .spin {
+        animation: none;
+    }
+
+#main-body {
+    padding-top: 12em;
+}
 }
 
-@media only screen and (min-width: 571px){
-    .stacked-menu {
-        display: none;
-    }
-}
