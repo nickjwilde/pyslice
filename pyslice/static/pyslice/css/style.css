@@ -126,6 +126,7 @@ label {
 	padding: 0;
     
     position: fixed;
+    top: 0;
     left: 0;
     right: 0;
 
@@ -213,7 +214,11 @@ label {
 
 #main-body {
 	margin: 0 auto;
-    padding-top: 5em;
+    padding: 5em;
+    margin-top: 5em;
+    border-left: solid 4px #ff3c2e;
+
+    box-shadow: 0 4px 20px grey;
 
 	width: 60%;
 }

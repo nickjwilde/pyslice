@@ -13,9 +13,9 @@
     {% block nav %}
 		<div class="nav">
 			<div class="nav-item"><a href="{% url 'pyslice:home' %}"><i class="fa fa-home reverse-spin"></i><span class="menu-text hidden">Home</span></a></div>
-			<div class="nav-item"><a href="#"><i class="fa fa-info-circle reverse-spin"></i><span class="menu-text hidden">About</span></a></div>
-			<div class="nav-item"><a href="#"><i class="fa fa-envelope-o reverse-spin"></i><span class="menu-text hidden">Contact</span></a></div>
-			<div class="nav-item"><a href="#"><i class="fa fa-book reverse-spin"></i><span class="menu-text hidden">Posts</span></a></div>
+			<div class="nav-item"><a href="{% url 'pyslice:about' %}"><i class="fa fa-info-circle reverse-spin"></i><span class="menu-text hidden">About</span></a></div>
+			<div class="nav-item"><a href="{% url 'pyslice:contact' %}"><i class="fa fa-envelope-o reverse-spin"></i><span class="menu-text hidden">Contact</span></a></div>
+			<div class="nav-item"><a href="{% url 'pyslice:learn' %}"><i class="fa fa-book reverse-spin"></i><span class="menu-text hidden">Learn</span></a></div>
 		</div>
     {% endblock %}
 
