@@ -16,6 +16,11 @@
 */
 
 /* Elements */
+a {
+    text-decoration: none;
+    color: #2ecdff;
+}
+
 body{
 	margin: 0;
 	padding-bottom: 6rem;
@@ -215,6 +220,7 @@ label {
 #main-body {
 	margin: 0 auto;
     padding: 5em;
+    padding-top: 1em;
     margin-top: 5em;
     border-left: solid 4px #ff3c2e;
 
@@ -240,6 +246,10 @@ label {
 
 /* Responsive */
 @media only screen and (max-width: 570px){
+    h1 {
+        border-bottom: solid 4px;
+    }
+
     .nav-item {
         float: none;
         width: 100%;
@@ -268,8 +278,11 @@ label {
         animation: none;
     }
 
-#main-body {
-    padding-top: 12em;
-}
+    #main-body {
+        margin-top: 15em;
+        border-left: none;
+        padding-left: 1em;
+        box-shadow: none;
+    }
 }
 
