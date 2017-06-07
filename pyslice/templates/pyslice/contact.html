@@ -1,9 +1,17 @@
 {% extends 'pyslice/base.html' %}
 
 {% block head %}
-<title>Contact</title>
+    <title>Contact</title>
 {% endblock %}
 
 {% block body %}
-<h1> Contact me</h1>
+    <h1> Contact Me</h1>
+    <div id="contactFormErrors" class="alert" style="display:none;">
+        <span class="close_alert" onclick="this.parentElement.style.display='none';">&times;</span><div id="error_text"></div>
+    </div>
+    <form id="contactForm" action="#" method="post">
+        {% csrf_token %}
+        {{ form }}
+        <input type="submit" value="Submit">
+    </form>
 {% endblock %}

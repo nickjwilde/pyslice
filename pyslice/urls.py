@@ -6,6 +6,6 @@ app_name = 'pyslice'
 urlpatterns = [
     url(r'^$', views.home, name='home'),
     url(r'^about/$', views.about, name='about'),
-    url(r'^contact/$', views.contact, name='contact'),
+    url(r'^contact/$', views.ContactView.as_view(), name='contact'),
     url(r'^learn/$', views.learn, name='learn'),
 ]
