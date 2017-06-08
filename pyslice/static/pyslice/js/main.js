@@ -26,17 +26,19 @@ $(document).ready(function(){
             data: form_data,
             success: function(data){
                 if (data['status'] == 'failure'){
-                    $("#error_text").html(data['html']);
-                    $("#contactFormErrors").css('display', 'block');
+                    $("#error_text").text(data['errors']);
+                    $("#contactFormErrors").fadeIn(600);
                 }else{
-                    $("#main-body").html(data['html']);
+                    $("#contactFormSuccess").text(data['html']);
+                    $("#contactFormSuccess").fadeIn(600);
+                    $("#id_name").val('');
+                    $("#id_email").val('');
+                    $("#contactFormSuccess").delay(3000).fadeOut(600);
                 }
-                console.log(data);
             },
             error: function(data){
                 $("#error_text").text(data);
                 $("#contactFormErrors").css('display', 'block');
-                console.log(data);
             },
         });
     });

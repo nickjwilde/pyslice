@@ -21,16 +21,21 @@ class ContactView(View):
     form_class = ContactForm
     
     def get(self, request):
-        form = self.form_class()
+        form = self.form_class(label_suffix='')
         return render(request, self.template_name, {'form': form})
 
     def post(self, request, *args, **kwargs):
-        form = self.form_class(request.POST)
+        form = self.form_class(request.POST, label_suffix='')
         response_data = {}
         if form.is_valid():
             response_data['status'] = 'success'
-            response_data['html'] = '<h2>Thanks!<h2>'
+            response_data['html'] = "Thank you! Your response has been recorded. I will try to get back to you as soon as possible."
         else:
             response_data['status'] = 'failure'
-            response_data['html'] = form.errors.as_ul()
+            errors = []
+            for key, error in form.errors.items():
+                errors.extend(error.data)
+            response_data['errors'] = "\n".join(str(x.message) for x in errors)
+            print(response_data['errors'])
+            #response_data['errors'] = form.errors.as_json(escape_html=True)
         return HttpResponse(json.dumps(response_data), content_type="application/json")
