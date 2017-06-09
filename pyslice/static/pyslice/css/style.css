@@ -88,7 +88,8 @@ label {
 /* Classes */
 .alert {
     padding: 20px;
-    background-color: #0088d8;
+    background-color: #29a1c7;
+    border-radius: 5px;
     color: white;
     margin-bottom: 15px;
 }

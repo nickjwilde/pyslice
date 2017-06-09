@@ -34,6 +34,7 @@ $(document).ready(function(){
                     $("#id_name").val('');
                     $("#id_email").val('');
                     $("#contactFormSuccess").delay(3000).fadeOut(600);
+                    $("#contactFormErrors").fadeOut(600);
                 }
             },
             error: function(data){
