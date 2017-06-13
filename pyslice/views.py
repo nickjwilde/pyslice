@@ -1,10 +1,11 @@
-﻿from django.shortcuts import render
+﻿from django.shortcuts import render, get_object_or_404
 from django.http import HttpResponse
 from django.views import View
 
 import json
 
 from .forms import ContactForm
+from .models import Article
 
 # Create your views here.
 def home(request):
@@ -15,6 +16,11 @@ def about(request):
 
 def learn(request):
     return render(request, "pyslice/learn.html", None)
+
+def article(request, slug):
+    article = get_object_or_404(Article, slug=slug)
+    context = {'article': article}
+    return render(request, "pyslice/article.html", context)
 
 class ContactView(View):
     template_name = 'pyslice/contact.html'

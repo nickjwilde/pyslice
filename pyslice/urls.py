@@ -8,4 +8,5 @@ urlpatterns = [
     url(r'^about/$', views.about, name='about'),
     url(r'^contact/$', views.ContactView.as_view(), name='contact'),
     url(r'^learn/$', views.learn, name='learn'),
+    url(r'^learn/(?P<slug>[a-zA-Z0-9_-]+)/$', views.article, name='article'),
 ]

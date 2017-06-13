@@ -1,0 +1,8 @@
+{% extends 'pyslice/base.html' %}
+
+{% block head %}
+<title>{{ article.title }}</title>
+{% endblock %}
+{% block body %}
+{{ article.content | safe }}
+{% endblock %}
