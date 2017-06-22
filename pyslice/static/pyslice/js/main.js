@@ -45,7 +45,7 @@ $(document).ready(function(){
     });
 
     $(".menu-bars").on('click', function(e){
-        $(this).siblings().slideToggle();
+        $(this).siblings(":not(#logo)").slideToggle();
     });
 
     $(window).resize(function(){
