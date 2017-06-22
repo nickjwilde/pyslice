@@ -109,40 +109,20 @@ label {
     color: black;
 }
 
-.menu-text {
+.menu-bars {
+    display: none;
+    width: 100%;
+    height: 20px;
+    padding: 10px 50%;
+    cursor: pointer;
 }
 
-@keyframes leftRight {
-   100% {
-       transform: translate(-10px);
-       display: block;
-       /*opacity: 1;*/
-       float: right;
-   }
-}
-
-@keyframes rightLeft {
-    100% {
-        transform: translate(-45px);
-        display: none;
-        opacity: 0;
-        float: right;
-    }
-}
-
-.menu-text.hidden {
+.menu-bars .bar {
+    background-color: #2ecdff;
+    height: 2px;
+    width: 25px;
     display: block;
-    float: right;
-    transform: translate(-10px);
-    animation: rightLeft 1s ease-in-out forwards;
-    transition: all 1s ease-in-out;
-}
-
-.menu-text.visible {
-    float: right;
-    transform: translate(-40px);
-    animation: leftRight 1s ease-in-out forwards;
-    transition: all 1s ease-in-out;
+    margin-top: 4px;
 }
 
 .nav {
@@ -151,6 +131,7 @@ label {
 
 	margin: 0 auto;
 	padding: 0;
+    box-shadow: 0 4px 4px grey;
     
     position: fixed;
     top: 0;
@@ -212,24 +193,6 @@ label {
 	list-style-type: none;
 }
 
-.spin {
-    animation: spin 1s ease-in-out;
-}
-
-.reverse-spin {
-    animation-name: revspin;
-    animation-duration: 1s;
-    animation-timing-function: ease-in-out;
-}
-
-@keyframes spin {
-    100% { transform: rotate(360deg);}
-}
-
-@keyframes revspin {
-    100% {transform: rotate(-360deg);}
-}
-
 .uline-h {
 	border-bottom: solid 2px #d84c00;
 	padding-bottom: 5px;
@@ -280,26 +243,20 @@ label {
         max-width: none;
     }
 
-    .menu-text.hidden {
-        float: none;
-        transform: none;
-        animation: none;
-        display: inline;
+    .menu-bars {
+        display: block;
     }
 
-    .menu-text.visible {
+    .menu-text {
         float: none;
-        animation: none;
         transform: none;
         display: inline;
     }
 
-    .reverse-spin {
-        animation: none;
-    }
-
-    .spin {
-        animation: none;
+    .menu-text {
+        float: none;
+        transform: none;
+        display: inline;
     }
 
     #main-body {

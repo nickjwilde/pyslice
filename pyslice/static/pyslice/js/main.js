@@ -44,15 +44,13 @@ $(document).ready(function(){
         });
     });
 
-
-
-
-    $(".nav-item a").mouseenter(function(e){
-        $(this).children(".fa").toggleClass("spin reverse-spin");
-        $(this).children(".menu-text").toggleClass("hidden visible");
+    $(".menu-bars").on('click', function(e){
+        $(this).siblings().slideToggle();
     });
-    $(".nav-item a").mouseleave(function(e){
-        $(this).children(".fa").toggleClass("spin reverse-spin");
-        $(this).children(".menu-text").toggleClass("hidden visible");
+
+    $(window).resize(function(){
+        $(".menu-bars").siblings().removeAttr('style');
     });
+
+
 });
