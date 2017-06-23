@@ -18,5 +18,5 @@ from django.contrib import admin
 
 urlpatterns = [
     url(r'^', include('pyslice.urls')),
-    url(r'^admin/', admin.site.urls),
+    url(r'^pyslice_admin/', admin.site.urls),
 ]

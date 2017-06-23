@@ -6,4 +6,38 @@
 
 {% block body %}
 <h1>Learn</h1>
+<p>This is the entry page for learning different skills and techniques you will need as a data scientist. I've laid out the road map below to give you an overview of what topics are covered and in what order you can proceed. You'll be following the same order I have followed in my journey learning data analytics.</p>
+
+<h2>Part 1</h2>
+<h3>Satistics</h3>
+<p>Here you will learn the difference between descriptive and inferential statistics. This is the foundation you'll build other topics and ideas on.</p>
+<ul class="page-refs">
+    <li><a href="{% url 'pyslice:learn' %}brick-mortar-wood">Brick, Mortar, and Wood: Laying the Foundation</a></li>
+</ul>
+
+<h2>Part 2</h2>
+<h3>Maths and Stuff</h3>
+<p>In this section you will learn the math needed to excel as a data analyst. We will cover topics in Linear Algebra and Multivariable Calculus</p>
+<ul class="page-refs">
+    <li><a href="{% url 'pyslice:learn' %}in-the-beginning-there-was-a-dot">In The Beginning, There Was a Dot</a></li>
+    <li><a href="{% url 'pyslice:learn' %}afraid-of-the-unknown">Afraid of the Unknown</a></li>
+</ul>
+
+<h2>Part 3</h2>
+<h3>Databases</h3>
+<p>In Part 3, you will learn SQL syntax and how to handle databases. You will learn about NoSql and how it's used in data warehousing. We'll also touch on tools like Hadoop and Spark.
+<ul class="page-refs">
+    <li><a href="{% url 'pyslice:learn' %}a-sequel-to-data">A Sequel to Data</a></li>
+    <li><a href="{% url 'pyslice:learn' %}rise-of-the-nosql">Rise of the NoSql</a></li>
+    <li><a href="{% url 'pyslice:learn' %}the-right-tool-for-the-job">The Right Tool for the Job</a></li>
+</ul>
+
+<h2>Part 4</h2>
+<h3>Visualization</h3>
+<p>During Part 4, You will learn about the different techniques and tools to visualize the data in a meaningful way.
+
+<h2>Part 5</h2>
+<h3>Machine Learning</h3>
+<p>This is where it becomes fun. We'll delve into this topic a lot as there's a lot of potential here. Some people say Machine Learning could help us get AI</p>
+
 {% endblock %}

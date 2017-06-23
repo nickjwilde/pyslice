@@ -194,6 +194,10 @@ label {
     transition: .5s ease;
 }
 
+.page-refs{
+    list-style-type: none;
+}
+
 .side-nav {
 	float: left;
 
@@ -277,7 +281,7 @@ label {
     }
 
     #main-body {
-        margin-top: 15em;
+        margin-top: 8em;
         border-left: none;
         padding-left: 1em;
         box-shadow: none;
